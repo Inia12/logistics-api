@@ -14,8 +14,8 @@ Backend service for managing shipments.
 
 - Create shipment
 - Get all shipments
-- Search by client
-- Search by status
+- Search shipments by client
+- Search shipments by status
 - Update shipment status
 - Delete shipment
 
@@ -32,4 +32,7 @@ DELETE /shipments/{id}
 
 PostgreSQL
 
-## Run
+## Run project
+
+```bash
+mvn spring-boot:run
