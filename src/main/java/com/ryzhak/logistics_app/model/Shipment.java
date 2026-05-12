@@ -8,6 +8,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
+
+import jakarta.validation.constraints.NotBlank;
+
 import java.time.LocalDateTime;
 
 
@@ -21,7 +24,10 @@ public class Shipment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Client name cannot be empty")
     private String clientName;
+
+    @NotBlank(message = "Address cannot be empty")
     private String address;
     private Status status;
     private LocalDateTime createdAt;
